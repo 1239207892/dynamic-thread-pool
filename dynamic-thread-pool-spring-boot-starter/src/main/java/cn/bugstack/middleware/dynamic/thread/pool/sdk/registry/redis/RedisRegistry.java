@@ -11,9 +11,9 @@ import java.time.Duration;
 import java.util.List;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
  * @description Redis 注册中心
- * @create 2024-05-12 16:22
+ * @Author: @加载中
+ * @Date: 2024/5/19
  */
 public class RedisRegistry implements IRegistry {
 

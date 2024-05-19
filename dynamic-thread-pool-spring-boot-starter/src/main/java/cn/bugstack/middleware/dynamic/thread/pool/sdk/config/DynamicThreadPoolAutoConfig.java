@@ -27,9 +27,9 @@ import java.util.Set;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 动态配置入口
- * @create 2024-05-12 15:37
+ * @Author: @加载中
+ * @Date: 2024/5/19
  */
 @Configuration
 @EnableConfigurationProperties(DynamicThreadPoolAutoProperties.class)

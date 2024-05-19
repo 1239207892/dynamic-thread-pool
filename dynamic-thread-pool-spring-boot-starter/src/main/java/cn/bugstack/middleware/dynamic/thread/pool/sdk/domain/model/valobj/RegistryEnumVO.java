@@ -1,9 +1,9 @@
 package cn.bugstack.middleware.dynamic.thread.pool.sdk.domain.model.valobj;
 
 /**
- * @author Fuzhengwei bugstack.cn @小傅哥
  * @description 注册中心枚举值对象 key
- * @create 2024-05-12 16:26
+ * @Author: @加载中
+ * @Date: 2024/5/19
  */
 public enum RegistryEnumVO {
 
