@@ -21,6 +21,10 @@ public class DynamicThreadPoolService implements IDynamicThreadPoolService {
     private final Logger logger = LoggerFactory.getLogger(DynamicThreadPoolService.class);
 
     private final String applicationName;
+
+    /**
+     * Spring 会自动将所有 ThreadPoolExecutor 类型的 Bean 收集到一个 Map 中，键为 Bean 的名称，值为 Bean 的实例。
+     */
     private final Map<String, ThreadPoolExecutor> threadPoolExecutorMap;
 
     public DynamicThreadPoolService(String applicationName, Map<String, ThreadPoolExecutor> threadPoolExecutorMap) {

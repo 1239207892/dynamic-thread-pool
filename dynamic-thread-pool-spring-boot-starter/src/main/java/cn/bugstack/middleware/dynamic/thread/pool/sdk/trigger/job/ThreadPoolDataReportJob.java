@@ -31,10 +31,13 @@ public class ThreadPoolDataReportJob {
     @Scheduled(cron = "0/20 * * * * ?")
     public void execReportThreadPoolList() {
         List<ThreadPoolConfigEntity> threadPoolConfigEntities = dynamicThreadPoolService.queryThreadPoolList();
+
+        // 上报
         registry.reportThreadPool(threadPoolConfigEntities);
         logger.info("动态线程池，上报线程池信息：{}", JSON.toJSONString(threadPoolConfigEntities));
 
         for (ThreadPoolConfigEntity threadPoolConfigEntity : threadPoolConfigEntities) {
+            // 上报
             registry.reportThreadPoolConfigParameter(threadPoolConfigEntity);
             logger.info("动态线程池，上报线程池配置：{}", JSON.toJSONString(threadPoolConfigEntity));
         }

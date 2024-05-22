@@ -71,7 +71,7 @@ public class DynamicThreadPoolAutoConfig {
         return new RedisRegistry(redissonClient);
     }
 
-    @Bean("dynamicThreadPollService")
+    @Bean("dynamicThreadPoolService")
     public DynamicThreadPoolService dynamicThreadPollService(ApplicationContext applicationContext, Map<String, ThreadPoolExecutor> threadPoolExecutorMap, RedissonClient redissonClient) {
         applicationName = applicationContext.getEnvironment().getProperty("spring.application.name");
 

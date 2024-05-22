@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import javax.annotation.Resource;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -21,18 +22,20 @@ public class Application {
         SpringApplication.run(Application.class);
     }
 
+//    @Resource
+//    private IDynamicThreadPoolService iDynamicThreadPoolService;
+
     @Resource
-    private IDynamicThreadPoolService iDynamicThreadPoolService;
+    private Map<String, ExecutorService> threadPoolExecutorMap;
 
     @Bean
     public ApplicationRunner applicationRunner(ExecutorService threadPoolExecutor01) {
-
-        ThreadPoolConfigEntity threadPoolConfigEntity = new ThreadPoolConfigEntity();
-
-        threadPoolConfigEntity.setPoolSize();
-
-
-        iDynamicThreadPoolService.updateThreadPoolConfig(threadPoolConfigEntity);
+//
+//        ThreadPoolConfigEntity threadPoolConfigEntity = new ThreadPoolConfigEntity();
+//
+//
+//
+//        iDynamicThreadPoolService.updateThreadPoolConfig(threadPoolConfigEntity);
 
         return args -> {
             while (true){
