@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 
 /**
- * @description Redis 注册中心
+ * @Description Redis 注册中心
  * @Author: @加载中
  * @Date: 2024/5/19
  */

@@ -5,7 +5,7 @@ import cn.bugstack.middleware.dynamic.thread.pool.sdk.domain.model.entity.Thread
 import java.util.List;
 
 /**
- * @description 注册中心接口
+ * @Description 注册中心接口
  * @Author: @加载中
  * @Date: 2024/5/19
  */

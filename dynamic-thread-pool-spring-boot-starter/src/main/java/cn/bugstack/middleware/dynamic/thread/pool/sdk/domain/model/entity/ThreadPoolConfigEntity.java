@@ -1,7 +1,7 @@
 package cn.bugstack.middleware.dynamic.thread.pool.sdk.domain.model.entity;
 
 /**
- * @description 线程池配置实体对象
+ * @Description 线程池配置实体对象
  * @Author: @加载中
  * @Date: 2024/5/19
  */

@@ -1,5 +1,5 @@
 /**
- * @description 触发器 job、listener
+ * @Description 触发器 job、listener
  * @Author: @加载中
  * @Date: 2024/5/19
  */

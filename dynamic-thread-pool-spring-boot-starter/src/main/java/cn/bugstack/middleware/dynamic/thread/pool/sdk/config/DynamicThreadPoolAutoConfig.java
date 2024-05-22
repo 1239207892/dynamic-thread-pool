@@ -27,7 +27,7 @@ import java.util.Set;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @description 动态配置入口
+ * @Description 动态配置入口
  * @Author: @加载中
  * @Date: 2024/5/19
  */

@@ -3,7 +3,7 @@ package cn.bugstack.middleware.dynamic.thread.pool.sdk.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @description 动态线程池配置
+ * @Description 动态线程池配置
  * @Author: @加载中
  * @Date: 2024/5/19
  */

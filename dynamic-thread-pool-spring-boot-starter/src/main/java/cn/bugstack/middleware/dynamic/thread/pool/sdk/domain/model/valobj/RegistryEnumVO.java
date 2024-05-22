@@ -1,7 +1,7 @@
 package cn.bugstack.middleware.dynamic.thread.pool.sdk.domain.model.valobj;
 
 /**
- * @description 注册中心枚举值对象 key
+ * @Description 注册中心枚举值对象 key
  * @Author: @加载中
  * @Date: 2024/5/19
  */
