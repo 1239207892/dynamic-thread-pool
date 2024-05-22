@@ -1,11 +1,14 @@
 package cn.bugstack;
 
+import cn.bugstack.middleware.dynamic.thread.pool.sdk.domain.IDynamicThreadPoolService;
+import cn.bugstack.middleware.dynamic.thread.pool.sdk.domain.model.entity.ThreadPoolConfigEntity;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import javax.annotation.Resource;
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
@@ -18,8 +21,19 @@ public class Application {
         SpringApplication.run(Application.class);
     }
 
+    @Resource
+    private IDynamicThreadPoolService iDynamicThreadPoolService;
+
     @Bean
     public ApplicationRunner applicationRunner(ExecutorService threadPoolExecutor01) {
+
+        ThreadPoolConfigEntity threadPoolConfigEntity = new ThreadPoolConfigEntity();
+
+        threadPoolConfigEntity.setPoolSize();
+
+
+        iDynamicThreadPoolService.updateThreadPoolConfig(threadPoolConfigEntity);
+
         return args -> {
             while (true){
                 // 创建一个随机时间生成器

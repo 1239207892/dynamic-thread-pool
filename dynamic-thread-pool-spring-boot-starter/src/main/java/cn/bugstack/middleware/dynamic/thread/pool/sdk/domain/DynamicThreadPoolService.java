@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @Description 动态线程池服务
+ * @Description 动态线程池服务实现类
  * @Author: @加载中
  * @Date: 2024/5/19
  */
@@ -76,6 +76,7 @@ public class DynamicThreadPoolService implements IDynamicThreadPoolService {
     @Override
     public void updateThreadPoolConfig(ThreadPoolConfigEntity threadPoolConfigEntity) {
         if (null == threadPoolConfigEntity || !applicationName.equals(threadPoolConfigEntity.getAppName())) return;
+
         ThreadPoolExecutor threadPoolExecutor = threadPoolExecutorMap.get(threadPoolConfigEntity.getThreadPoolName());
         if (null == threadPoolExecutor) return;
 

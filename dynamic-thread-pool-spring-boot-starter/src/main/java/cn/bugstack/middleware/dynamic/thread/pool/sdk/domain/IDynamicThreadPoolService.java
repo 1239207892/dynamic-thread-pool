@@ -5,7 +5,7 @@ import cn.bugstack.middleware.dynamic.thread.pool.sdk.domain.model.entity.Thread
 import java.util.List;
 
 /**
- * @Description 动态线程池服务
+ * @Description 动态线程池服务接口类
  * @Author: @加载中
  * @Date: 2024/5/19
  */
