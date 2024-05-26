@@ -28,6 +28,9 @@ public class ThreadPoolDataReportJob {
         this.registry = registry;
     }
 
+    /**
+     * 上报线程池信息
+     */
     @Scheduled(cron = "0/20 * * * * ?")
     public void execReportThreadPoolList() {
         List<ThreadPoolConfigEntity> threadPoolConfigEntities = dynamicThreadPoolService.queryThreadPoolList();

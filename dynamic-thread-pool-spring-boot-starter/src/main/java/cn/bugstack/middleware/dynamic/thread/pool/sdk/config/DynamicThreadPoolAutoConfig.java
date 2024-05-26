@@ -98,6 +98,12 @@ public class DynamicThreadPoolAutoConfig {
         return new ThreadPoolDataReportJob(dynamicThreadPoolService, registry);
     }
 
+    /**
+     * 创建一个监听器threadPoolConfigAdjustListener
+     * @param dynamicThreadPoolService
+     * @param registry
+     * @return
+     */
     @Bean
     public ThreadPoolConfigAdjustListener threadPoolConfigAdjustListener(IDynamicThreadPoolService dynamicThreadPoolService, IRegistry registry) {
         return new ThreadPoolConfigAdjustListener(dynamicThreadPoolService, registry);
@@ -106,6 +112,8 @@ public class DynamicThreadPoolAutoConfig {
     @Bean(name = "dynamicThreadPoolRedisTopic")
     public RTopic threadPoolConfigAdjustListener(RedissonClient redissonClient, ThreadPoolConfigAdjustListener threadPoolConfigAdjustListener) {
         RTopic topic = redissonClient.getTopic(RegistryEnumVO.DYNAMIC_THREAD_POOL_REDIS_TOPIC.getKey() + "_" + applicationName);
+
+        // 将监听器threadPoolConfigAdjustListener添加到主题topic中，监听该主题下所有的ThreadPoolConfigEntity类型消息
         topic.addListener(ThreadPoolConfigEntity.class, threadPoolConfigAdjustListener);
         return topic;
     }

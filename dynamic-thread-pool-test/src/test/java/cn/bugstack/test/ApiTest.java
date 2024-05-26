@@ -24,6 +24,8 @@ public class ApiTest {
         ThreadPoolConfigEntity threadPoolConfigEntity = new ThreadPoolConfigEntity("dynamic-thread-pool-test-app", "threadPoolExecutor01");
         threadPoolConfigEntity.setPoolSize(100);
         threadPoolConfigEntity.setMaximumPoolSize(100);
+
+        // 发布消息
         dynamicThreadPoolRedisTopic.publish(threadPoolConfigEntity);
 
         new CountDownLatch(1).await();
